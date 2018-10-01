@@ -29,7 +29,7 @@
         <!--可配置多个拦截器,顺序执行-->
         <mvc:interceptor>
             <!--如果不配置或/*,将拦截所有的Controller-->
-            <mvc:mapping path="/*"/>
+            <mvc:mapping path="/**"/>
                 <bean class="cn.com.sky.interceptor.SkyInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
