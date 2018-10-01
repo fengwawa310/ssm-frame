@@ -35,15 +35,15 @@ public class BUserServiceImpl implements BUserService {
         BUserExample bUserExample = new BUserExample();
         bUserExample.createCriteria().andIdEqualTo(id);
 
-//        boolean flag = true;
-//
-//        if (flag){
-//            BUser bUser = bUserMapper.selectByExample(bUserExample).get(0);
-//            bUser.setId("000");
-//            bUser.setLoginName("sky");
-//            bUserMapper.insert(bUser);
-//            throw new RuntimeException();
-//        }
+        boolean flag = true;
+
+        if (flag){
+            BUser bUser = bUserMapper.selectByExample(bUserExample).get(0);
+            bUser.setId("000");
+            bUser.setLoginName("sky");
+            bUserMapper.insert(bUser);
+            throw new RuntimeException();
+        }
 
         return bUserMapper.selectByExample(bUserExample);
     }
