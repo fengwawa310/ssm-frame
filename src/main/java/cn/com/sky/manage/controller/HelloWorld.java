@@ -3,6 +3,7 @@ package cn.com.sky.manage.controller;
 import cn.com.sky.interceptor.SkyInterceptor;
 import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -18,8 +19,10 @@ public class HelloWorld {
 
     Logger logger = Logger.getLogger(HelloWorld.class);
 
-    @RequestMapping(value = "/hello")
+    @RequestMapping(value = "/hello",method = RequestMethod.GET,
+            produces = "application/json;charset=utf-8")
     public String hello(){
+        logger.info("进入hello方法了。。。");
         return "Hello World";
     }
 
